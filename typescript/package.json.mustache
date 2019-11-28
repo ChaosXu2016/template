@@ -1,8 +1,9 @@
 {
-  "name": "typescript",
+  "name": "{{packageName}}",
   "version": "1.0.0",
-  "description": "",
+  "description": "{{description}}",
   "main": "index.js",
+  "types": "index.d.ts"
   "scripts": {
     "test": "mocha -r ts-node/register test/**/*.test.ts",
     "build": "tsc -p .",
@@ -18,7 +19,11 @@
     "tslint": "^5.20.1",
     "typescript": "^3.7.2"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    {{# keywords}}
+      "{{.}}"
+    {{/keywords}}
+  ],
+  "author": "{{author}}",
   "license": "ISC"
 }
